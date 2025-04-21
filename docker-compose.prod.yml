@@ -1,0 +1,29 @@
+services:
+  backend:
+    image: esscraye/reiletai-api:latest
+    container_name: reiletai-backend
+    volumes:
+      - app_data:/app/data
+    ports:
+      - "8123:8123"
+    networks:
+      - networkReilet
+    restart: unless-stopped
+
+  frontend:
+    image: esscraye/reiletai-web:latest
+    container_name: reiletai-frontend
+    ports:
+      - "3000:3000"
+    depends_on:
+      - backend
+    networks:
+      - networkReilet
+    restart: unless-stopped
+
+volumes:
+  app_data:
+
+networks:
+  networkReilet:
+    driver: bridge

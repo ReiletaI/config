@@ -1,0 +1,33 @@
+services:
+  backend:
+    build:
+      context: ./api
+      dockerfile: Dockerfile
+    container_name: reiletai-backend
+    volumes:
+      - app_data:/app/data
+    ports:
+      - "8000:8123"
+    networks:
+      - networkReilet
+    restart: unless-stopped
+
+  frontend:
+    build:
+      context: ./web
+      dockerfile: Dockerfile
+    container_name: reiletai-frontend
+    ports:
+      - "3000:3123"
+    depends_on:
+      - backend
+    networks:
+      - networkReilet
+    restart: unless-stopped
+
+volumes:
+  app_data:
+
+networks:
+  networkReilet:
+    driver: bridge
