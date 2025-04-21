@@ -45,7 +45,7 @@ Vous pouvez démarrer le projet de deux manières :
 
 4. **Accès** :  
    - API : http://localhost:8123  
-   - Frontend : http://localhost:3123
+   - Frontend : http://localhost:3000
 
 
 ## ⚡️ 2. Production (Docker Hub images)
