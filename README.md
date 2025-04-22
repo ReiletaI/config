@@ -1,5 +1,5 @@
 # 📦 Reiletai
-> 🌐 Site en ligne : https://reiletai.baleras.fr
+> 🌐 Site en ligne : https://reiletai.baleras.fr (privélier le déploiement en local)
 
 Ce projet regroupe deux applications Dockerisées :
 
