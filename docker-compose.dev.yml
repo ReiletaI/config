@@ -1,6 +1,6 @@
 services:
   backend:
-    image: esscraye/reiletai-api:latest
+    image: esscraye/reiletai-api:dev
     container_name: reiletai-backend
     volumes:
       - app_data:/app/data
@@ -9,13 +9,6 @@ services:
     networks:
       - networkReilet
     restart: unless-stopped
-    deploy:
-      resources:
-        reservations:
-          devices:
-            - driver: nvidia
-              count: all
-              capabilities: [gpu]
 
   frontend:
     image: esscraye/reiletai-web:latest

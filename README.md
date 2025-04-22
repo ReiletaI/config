@@ -52,40 +52,16 @@ Vous pouvez démarrer le projet de deux manières :
 
 Vous pouvez déployer rapidement en utilisant les images publiées :
 
-```yaml
-# docker-compose.prod.yml
-services:
-  backend:
-    image: esscraye/reiletai-api:latest
-    container_name: reiletai-backend
-    volumes:
-      - app_data:/app/data
-    ports:
-      - "8123:8123"
-    networks:
-      - networkReilet
-    restart: unless-stopped
-
-  frontend:
-    image: esscraye/reiletai-web:latest
-    container_name: reiletai-frontend
-    ports:
-      - "3000:3000"
-    depends_on:
-      - backend
-    networks:
-      - networkReilet
-    restart: unless-stopped
-
-volumes:
-  app_data:
-
-networks:
-  networkReilet:
-    driver: bridge
-```
-
 Lancez :
 ```bash
 docker compose -f docker-compose.prod.yml up -d
+```
+
+## 🛠️ 3. Mode Sans GPU
+
+Si vous n'avez pas de GPU, vous pouvez utiliser le mode sans GPU, grâce à l'image `esscraye/reiletai-api:dev`.
+
+Lancez le docker-compose.dev pour ça :
+```bash
+docker compose -f docker-compose.dev.yml up -d
 ```
