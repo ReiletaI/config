@@ -15,7 +15,7 @@ Vous pouvez démarrer le projet de deux manières :
 
 ---
 
-## 🚀 1. Développement local
+## 🚀 1. Développement local (privilégié)
 
 ### Prérequis
 
@@ -56,6 +56,8 @@ Vous pouvez démarrer le projet de deux manières :
 5. **Accès** :  
    - API : http://localhost:8123  
    - Frontend : http://localhost:3000
+  
+<b><span style="color:red;">Attention : le réseau de l'UQAC bloque notre application. Il est conseillé de télécharger toutes les images dont la taille finale sur le disque est d'environ 11Go et de tester sur un réseau sans réstrictions.</span></b>
 
 
 ## ⚡️ 2. Production (Docker Hub images)
